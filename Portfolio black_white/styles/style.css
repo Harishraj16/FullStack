@@ -1,0 +1,123 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.landingpage{
+
+  background: url('./harish\ BG\ grey.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header{
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+
+padding: 15px;
+}
+
+
+.navlink{
+
+  display: flex;
+  list-style: none;
+
+}
+
+.navlink li{
+  margin-right: 20px;
+}
+.navlink li a{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.logo{
+  font-size: 20px;
+  
+  font-family: 900;
+
+}
+
+.main{
+  padding: 0px 5%;
+  position: relative;
+  top: 5%;
+}
+
+.maintxt{
+  font-size: 3em;
+  font-weight: 400;
+}
+.maintxt span{
+
+  color: black;
+  -webkit-text-fill-color:transparent;
+  text-transform: uppercase; 
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 4em;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  
+}
+.main p{
+  font-weight: 500;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.main button a{
+
+  text-decoration: none;
+  color: white;
+}
+
+.main button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: black;
+  border-radius: 2px;
+  
+}
+
+.brands__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+
+.brand__image {
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1;
+  background-color: var(--white);
+}
+
+.brand__image img {
+  opacity: 0.5;
+  max-width: 120px;
+  transition: 0.3s;
+}
+
+.brand__image:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
