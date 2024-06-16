@@ -1,0 +1,75 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    background: #d8d8d8;
+    color: #000000;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    padding-top: 30px;
+}
+.counter{
+    background: rgb(156, 220, 243);
+    /* margin: 20px 0px ; */
+    height: 300px;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    padding:120px;
+    
+    
+}
+.counter p{
+    font-size: larger;
+    font-weight: 800;
+    position: relative;
+    bottom: 20px;
+    box-sizing: border-box;
+}
+.counter p span{
+    margin-left: 10px;
+    color: rgb(189, 51, 198);
+}
+.counter a{
+    box-sizing: border-box;
+    border: #444 solid;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    position: relative;
+    bottom: -20px;
+}
+.counter a:hover{
+    background-color: #fff;
+    color: #444;
+}
+.table{
+    background: lightgreen;
+    height: 325px;
+    padding-top: 100px;
+    
+}
+.table center button{
+    position: relative;
+    top: 20px;
+    box-sizing: border-box;
+    border: #444 solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+}
+.table center button:hover{
+    background-color: #fff;
+    color: #444;
+}

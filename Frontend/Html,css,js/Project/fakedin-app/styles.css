@@ -1,0 +1,51 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.btnn{
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.fake{
+    background-color: #75d3fb;
+    color: white;
+}
+
+.fake span{
+    background-color: white;
+    color: #0073b1;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.download{
+    background-color: #000000;
+    color: white;
+}
+
+.download:hover{
+    background-color: #303030;
+}
+
+.main-area,.greet{
+    padding: 20px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="signup result.html" method="get" enctype="multipart/form-data">
+        <div>
+            <label for="username">User Name</label>
+            <input name="username" id="username" type="text" value="Harish" maxlength="10" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input name="password" id="password" type="password" minlength="8" maxlength="10" required>
+        </div>
+        <div>
+            <label for="year of birth"> Year Of Birth</label>
+            <input type="date" name="year of birth" id="year of birth" min="2000-01-01" required>
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="E-mail" id="email" required> 
+        </div>
+        <div>
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" id="Male" value="Male">
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" id="Female" value="Female">
+            <label for="Female">Female</label>
+        </div>
+        <div>
+            <label for="state">State</label><br>
+            <select name="state" id="state">
+                <option value="    ">    </option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="AP">AP</option>
+                <option value="Kerala">Kerala</option>
+            </select>
+        </div>
+        <div>
+            <label for="about">About</label><br>
+            <textarea name="" id="" cols="30" rows="10">About me</textarea>
+        </div>
+        <div>
+            <label for="resume">Resume</label>
+            <input type="file" name="file" id="file">
+        </div>
+        <div>
+            <input type="checkbox" name="smsalert" id="smsalert">
+            <label for="smsalert">SMS alert</label>
+        </div>
+        <div>
+            <input type="checkbox" name="mailalert" id="mailalert">
+            <label for="emailalert">E- Mail alert</label>
+        </div>
+        <!-- <button type="submit">Submit</button> -->
+        <input type="image" src="images/submit button.png" width="100" height="20">
+        <button type="reset">Reset</button>
+    </form>  
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Count Elements Example</title>
+</head>
+<body>
+    <h1>Students Name</h1>
+    <ol>
+        <li><p name="exampleName">Harish Raj S</p></li>
+        <li><p name="exampleName">Abilash A</p></li>
+        <li><p name="otherName">Hariprasath S</p></li>
+        <li><p name="otherName">Ashwin Vishwajith</p></li>
+    </ol>
+    
+  <script>
+    const elementsWithName = document.getElementsByName("exampleName");
+    const count = elementsWithName.length;
+    alert(`Number of elements with name "exampleName": ${count}`);
+  </script>
+</body>
+</html>
