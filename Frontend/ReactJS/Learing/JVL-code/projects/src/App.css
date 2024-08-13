@@ -1,0 +1,9 @@
+body{
+    margin: 5rem;
+    justify-items: center;
+}
+
+.square{
+    height: 33px;
+    width: 50px;
+}
