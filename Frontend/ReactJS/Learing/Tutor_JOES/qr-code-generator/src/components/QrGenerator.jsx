@@ -6,14 +6,15 @@ const QrGenerator = () => {
     const [qrdata,setqrdata] = React.useState(null)
     const [qrsize,setqrsize] = React.useState(150)
     const [wait , setwait] = React.useState(true)
+    const [error,seterror] = React.useState(false);
     async function generateQR() {
         setloading(true)
         try {
-            wait = false;
             const url = `https://api.qrserver.com/v1/create-qr-code/?size=${qrsize}x${qrsize}&data=${encodeURIComponent(qrdata)}`;
             setqrImage(url);
         }
         catch (error) {
+            seterror(true);
             console.error("Error while fetching the data!")
         }
         finally {
@@ -28,6 +29,7 @@ const QrGenerator = () => {
                 <div className="flex flex-col bg-white rounded-lg shadow-lg items-center justify-center p-6 sm:p-8 md:p-10 lg:p-12 m-4 sm:m-6 md:m-8 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                     <h1 className='border-b-2 mb-4 text-lg sm:text-xl md:text-2xl text-center'>QR CODE Generator</h1>
                     {wait && <div className='m-3 p[b]-3 text-blue-700'>QR Image comes here...</div>}
+                    {error && <div className='m-3 p[b]-3 text-blue-700'> Server is too busy... try later!</div>}
                     {qrImage!=null && <img src={qrImage} alt="qr-code-image" className="mb-4 shadow-lg" />}
 
                     {/* Force label text to align to the left */}
@@ -38,12 +40,12 @@ const QrGenerator = () => {
 
                     <div className="w-full">
                         <label htmlFor="size" className="mb-2 text-sm md:text-base block text-left">Enter the Size</label>
-                        <input type="text" onChange={(e)=>{setqrsize(e.target.value)}} placeholder='Enter the size info (eg.250px)' className="mb-4 border p-2 rounded w-full" />
+                        <input type="text" onChange={(e)=>{setqrsize(e.target.value)}} placeholder='Enter the size info (eg.150px)' className="mb-4 border p-2 rounded w-full" />
                     </div>
 
                     <div className="flex space-x-2 mb-4 w-full justify-even">
-                        <button onClick={generateQR} disabled={loading} className="bg-blue-500 text-white p-2 rounded w-full sm:w-auto">
-                            Generate
+                        <button  onClick={generateQR} disabled={loading} className={`p-2 rounded w-full sm:w-auto ${loading ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-500'} text-white`}>
+                            {loading ? "Generating..." : "Generate"}
                         </button>
                         <button className="bg-green-500 text-white p-2 rounded w-full sm:w-auto">
                             Download
@@ -51,7 +53,7 @@ const QrGenerator = () => {
                     </div>
 
 
-                    <footer className="mt-4 text-sm md:text-base text-center">Crafted by Harish! ✨</footer>
+                    <footer className="mt-4 text-sm md:text-base text-center">Crafted by Harish Selva! ✨</footer>
                 </div>
             </div>
         </>
